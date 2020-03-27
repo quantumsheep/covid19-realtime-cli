@@ -1,5 +1,8 @@
 #!/bin/bash
 
+interval=$1
+interval=${interval:-30}
+
 while true; do
     lines=$((`tput lines` - 13))
 
@@ -8,5 +11,5 @@ while true; do
     clear -x
     echo "$res"
 
-    sleep 30
+    sleep $interval
 done
